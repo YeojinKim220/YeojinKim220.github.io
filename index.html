@@ -151,6 +151,12 @@
     
 <div class="card">
     
+    <div class="card-image">
+        <a href="/2020/03/11/post-20200311/" class="image is-7by1">
+            <img class="thumbnail" src="https://drive.google.com/open?id=1N9K1DoK3caMjD6kIA5Tx8c0tuvTyU-ED" alt="Unity Study - Simple password lock [1]">
+        </a>
+    </div>
+    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
@@ -165,7 +171,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a minute read (About 207 words)
+                    a minute read (About 152 words)
                 </span>
                 
                 
@@ -178,16 +184,16 @@
             
         </h1>
         <div class="content">
-            <p>비밀번호를 입력했을 때 다른 화면으로 전환되는 것을 구현하였다.<br>이는 두 가지 script로 이루어져 있는데 첫째는 실제 비밀번호와 입력한 비밀번호가 동일한지 확인하는 것이다.<br>두번째는 틀린 비밀번호를 입력했을 때 다시 잘못된 비밀번호임을 알리고 다시 비밀번호 입력 scene으로 돌아가는 것이다. </p>
+            <p>I implementedd switch to a different screen when a password is entered.<br>It consists of two scripts. The first is to check whether the actual password and the entered password are the same.<br>The second is to inform the user that the wrong password is entered again when the wrong password is entered and return to the password input scene again.</p>
 <ol>
-<li>[PasswordCheck] // Compare to the real password</li>
+<li>PasswordCheck : Compare to the real password</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using UnityEngine.UI; &#x2F;&#x2F;Button... Inputfield...</span><br><span class="line">using UnityEngine.SceneManagement;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class PasswordCheck : MonoBehaviour</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    private string password &#x3D; &quot;greatprogram&quot;;</span><br><span class="line">    public InputField UserInput;</span><br><span class="line">    public string USERINPUT;</span><br><span class="line">    private string correct &#x3D; &quot;Scenes&#x2F;correct&quot;;</span><br><span class="line">    private string wrong &#x3D; &quot;Scenes&#x2F;wrong&quot;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public void CheckPassword ()</span><br><span class="line">    &#123;</span><br><span class="line">        USERINPUT &#x3D; UserInput.text;</span><br><span class="line">        if (USERINPUT !&#x3D;null)</span><br><span class="line">        &#123;</span><br><span class="line">            if (USERINPUT &#x3D;&#x3D; password)</span><br><span class="line">            &#123;</span><br><span class="line">                SceneManager.LoadScene(correct);</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                SceneManager.LoadScene(wrong);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> UnityEngine.UI; <span class="comment">//Button... Inputfield...</span></span><br><span class="line"><span class="keyword">using</span> UnityEngine.SceneManagement;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PasswordCheck</span> :</span> MonoBehaviour</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">string</span> password = <span class="string">"greatprogram"</span>;</span><br><span class="line">    <span class="keyword">public</span> InputField UserInput;</span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">string</span> USERINPUT;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">string</span> correct = <span class="string">"Scenes/correct"</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">string</span> wrong = <span class="string">"Scenes/wrong"</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">CheckPassword</span> <span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        USERINPUT = UserInput.text;</span><br><span class="line">        <span class="keyword">if</span> (USERINPUT !=null)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (USERINPUT == password)</span><br><span class="line">            &#123;</span><br><span class="line">                SceneManager.LoadScene(correct);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                SceneManager.LoadScene(wrong);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ol>
-<li>[Return_to_main] // Change scenes</li>
+<li>Return_to_main : Change scenes</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using UnityEngine.UI; &#x2F;&#x2F;Button... Inputfield...</span><br><span class="line">using UnityEngine.SceneManagement;</span><br><span class="line"></span><br><span class="line">public class ReturnToMain : MonoBehaviour</span><br><span class="line">&#123;</span><br><span class="line">    private string main &#x3D; &quot;Scenes&#x2F;main&quot;;</span><br><span class="line">    public void GoToMain()</span><br><span class="line">    &#123;</span><br><span class="line">        SceneManager.LoadScene(main);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"><span class="keyword">using</span> UnityEngine.UI; <span class="comment">//Button... Inputfield...</span></span><br><span class="line"><span class="keyword">using</span> UnityEngine.SceneManagement;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReturnToMain</span> :</span> MonoBehaviour</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">string</span> main = <span class="string">"Scenes/main"</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">GoToMain</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        SceneManager.LoadScene(main);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         </div>
         
         
@@ -825,7 +831,7 @@
             
             <a href="/2020/03/11/post-20200311/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Unity Study - Simple password lock [1]">
+                    <img class="thumbnail" src="https://drive.google.com/open?id=1N9K1DoK3caMjD6kIA5Tx8c0tuvTyU-ED" alt="Unity Study - Simple password lock [1]">
                 </p>
             </a>
             
@@ -1051,7 +1057,7 @@
             
             <a href="/2020/03/11/post-20200311/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Unity Study - Simple password lock [1]">
+                    <img class="thumbnail" src="https://drive.google.com/open?id=1N9K1DoK3caMjD6kIA5Tx8c0tuvTyU-ED" alt="Unity Study - Simple password lock [1]">
                 </p>
             </a>
             
