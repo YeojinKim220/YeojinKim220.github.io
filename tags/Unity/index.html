@@ -175,7 +175,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 89 words)
+                    a minute read (About 207 words)
                 </span>
                 
                 
@@ -184,14 +184,19 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/03/11/post-20200311/">Unity - password lock</a>
+                <a class="has-link-black-ter" href="/2020/03/11/post-20200311/">Unity Study - Simple password lock [1]</a>
             
         </h1>
         <div class="content">
-            <p>[PasswordCheck] // Compare to the real password</p>
+            <p>비밀번호를 입력했을 때 다른 화면으로 전환되는 것을 구현하였다.<br>이는 두 가지 script로 이루어져 있는데 첫째는 실제 비밀번호와 입력한 비밀번호가 동일한지 확인하는 것이다.<br>두번째는 틀린 비밀번호를 입력했을 때 다시 잘못된 비밀번호임을 알리고 다시 비밀번호 입력 scene으로 돌아가는 것이다. </p>
+<ol>
+<li>[PasswordCheck] // Compare to the real password</li>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using UnityEngine.UI; &#x2F;&#x2F;Button... Inputfield...</span><br><span class="line">using UnityEngine.SceneManagement;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class PasswordCheck : MonoBehaviour</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    private string password &#x3D; &quot;greatprogram&quot;;</span><br><span class="line">    public InputField UserInput;</span><br><span class="line">    public string USERINPUT;</span><br><span class="line">    private string correct &#x3D; &quot;Scenes&#x2F;correct&quot;;</span><br><span class="line">    private string wrong &#x3D; &quot;Scenes&#x2F;wrong&quot;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public void CheckPassword ()</span><br><span class="line">    &#123;</span><br><span class="line">        USERINPUT &#x3D; UserInput.text;</span><br><span class="line">        if (USERINPUT !&#x3D;null)</span><br><span class="line">        &#123;</span><br><span class="line">            if (USERINPUT &#x3D;&#x3D; password)</span><br><span class="line">            &#123;</span><br><span class="line">                SceneManager.LoadScene(correct);</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                SceneManager.LoadScene(wrong);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>[Return_to_main] // Change scenes</p>
+<ol>
+<li>[Return_to_main] // Change scenes</li>
+</ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">using UnityEngine;</span><br><span class="line">using UnityEngine.UI; &#x2F;&#x2F;Button... Inputfield...</span><br><span class="line">using UnityEngine.SceneManagement;</span><br><span class="line"></span><br><span class="line">public class ReturnToMain : MonoBehaviour</span><br><span class="line">&#123;</span><br><span class="line">    private string main &#x3D; &quot;Scenes&#x2F;main&quot;;</span><br><span class="line">    public void GoToMain()</span><br><span class="line">    &#123;</span><br><span class="line">        SceneManager.LoadScene(main);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         </div>
         
@@ -438,14 +443,14 @@
             
             <a href="/2020/03/11/post-20200311/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Unity - password lock">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Unity Study - Simple password lock [1]">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-11T05:39:30.000Z">2020-03-11</time></div>
-                    <a href="/2020/03/11/post-20200311/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Unity - password lock</a>
+                    <a href="/2020/03/11/post-20200311/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Unity Study - Simple password lock [1]</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Unity/">Unity</a>
                     </p>
@@ -495,14 +500,14 @@
             
             <a href="/2020/03/03/useful-website/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Useful Websit for Github Blog">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Useful Website for Github Blog">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-03T21:27:44.000Z">2020-03-04</time></div>
-                    <a href="/2020/03/03/useful-website/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Useful Websit for Github Blog</a>
+                    <a href="/2020/03/03/useful-website/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Useful Website for Github Blog</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/github-blog-tutorial/">github_blog_tutorial</a>
                     </p>
@@ -664,14 +669,14 @@
             
             <a href="/2020/03/11/post-20200311/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Unity - password lock">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Unity Study - Simple password lock [1]">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-11T05:39:30.000Z">2020-03-11</time></div>
-                    <a href="/2020/03/11/post-20200311/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Unity - password lock</a>
+                    <a href="/2020/03/11/post-20200311/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Unity Study - Simple password lock [1]</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Unity/">Unity</a>
                     </p>
@@ -721,14 +726,14 @@
             
             <a href="/2020/03/03/useful-website/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Useful Websit for Github Blog">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Useful Website for Github Blog">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-03T21:27:44.000Z">2020-03-04</time></div>
-                    <a href="/2020/03/03/useful-website/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Useful Websit for Github Blog</a>
+                    <a href="/2020/03/03/useful-website/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Useful Website for Github Blog</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/github-blog-tutorial/">github_blog_tutorial</a>
                     </p>
