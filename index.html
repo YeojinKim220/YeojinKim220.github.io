@@ -163,6 +163,77 @@
 <div class="card">
     
     <div class="card-image">
+        <a href="/2020/06/05/project-20200605/" class="image is-7by1">
+            <img class="thumbnail" src="/gallery/thumbnails/background.jpeg" alt="딥러닝을 이용한 이미지 컬러링 선행 연구 조사">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-06-05T00:09:11.000Z">2020-06-05</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/ML-DL/">ML & DL</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 minutes read (About 290 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/06/05/project-20200605/">딥러닝을 이용한 이미지 컬러링 선행 연구 조사</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="DeOldify"><a href="#DeOldify" class="headerlink" title="DeOldify"></a>DeOldify</h2><p>흑백 사진을 컬러로 바꾸는 GAN + VGG16 모델</p>
+<p><a href="https://colab.research.google.com/github/jantic/DeOldify/blob/master/ImageColorizerColab.ipynb#scrollTo=663IVxfrpIAb">colab 링크</a></p>
+<p><a href="https://github.com/jantic/DeOldify">github 링크</a></p>
+<ul>
+<li>Colab 파일로 만들 때 이미지 주소를 이용해서 test 해볼 수 있어서 매우 간편</li>
+<li>Pretrained model에 대한 파일이 존재하기 때문에 실행 시간이 짧음.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">source_url &#x3D; &#39;https:&#x2F;&#x2F;upload.wikimedia.org&#x2F;wikipedia&#x2F;commons&#x2F;7&#x2F;78&#x2F;Coronaviruses_004_lores.jpg&#39; #@param &#123;type:&quot;string&quot;&#125;</span><br><span class="line">render_factor &#x3D; 35  #@param &#123;type: &quot;slider&quot;, min: 7, max: 40&#125;</span><br><span class="line">watermarked &#x3D; True #@param &#123;type:&quot;boolean&quot;&#125;</span><br><span class="line"></span><br><span class="line">if source_url is not None and source_url !&#x3D;&#39;&#39;:</span><br><span class="line">    image_path &#x3D; colorizer.plot_transformed_image_from_url(url&#x3D;source_url, render_factor&#x3D;render_factor, compare&#x3D;True, watermarked&#x3D;watermarked)</span><br><span class="line">    show_image_in_notebook(image_path)</span><br><span class="line">else:</span><br><span class="line">    print(&#39;Provide an image url and try again.&#39;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Automatic-Image-Colorization"><a href="#Automatic-Image-Colorization" class="headerlink" title="Automatic-Image-Colorization"></a>Automatic-Image-Colorization</h2><p>ResNet-18을 이용해서 train 시키고 CNN을 이용해서 upsampling 해서 image colorization한 모델</p>
+<ul>
+<li>MIT image data 사용</li>
+<li>training에서 test까지 모두 포함되어 있고 40,000개 iamge training</li>
+<li>training 속도가 비교적 빠름</li>
+</ul>
+<p><a href="https://colab.research.google.com/drive/1r45y6bnxT1d8qUe5YDovWYUbfX1hMnAz#scrollTo=UcovGnpHMl9D&forceEdit=true&sandboxMode=true">colab 링크</a></p>
+<p><a href="https://github.com/lukemelas/Automatic-Image-Colorization/">github 링크</a></p>
+<h2 id="Colorization-Network"><a href="#Colorization-Network" class="headerlink" title="Colorization Network"></a>Colorization Network</h2><p>CNN만을 이용한 colorizing 모델</p>
+<p><a href="https://colab.research.google.com/github/smartgeometry-ucl/dl4g/blob/master/colorization.ipynb">colab 링크</a></p>
+<p><a href="https://github.com/smartgeometry-ucl/dl4g">github 링크</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
         <a href="/2020/05/06/post-20200506/" class="image is-7by1">
             <img class="thumbnail" src="/gallery/thumbnails/background.jpeg" alt="면역학 STUDY (4) - Immune Response">
         </a>
@@ -182,7 +253,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    7 minutes read (About 979 words)
+                    7 minutes read (About 980 words)
                 </span>
                 
                 
@@ -206,50 +277,36 @@
 <h2 id="Adjuvant"><a href="#Adjuvant" class="headerlink" title="Adjuvant"></a>Adjuvant</h2><p>adjuvant는 immune response를 증가시키기 위해 사용하는데 adjuvant는 complete, incomplete가 존재한다. Incomplete adjuvant는 protease를 억제하여 immune response가 활발하게 일어날 수 있도록 돕는다. Complete adjuvant는 lymphocyte activation을 유도한다. </p>
 <p>Complete Freund’s adjuvant는 incomplete Freund’s adjuvant + Mycobacterium extract로 T cell, B cell을 activation 시키는 역할을 한다. </p>
 <hr>
-<h2 id="Primary-Antibody-Response"><a href="#Primary-Antibody-Response" class="headerlink" title="Primary Antibody Response"></a>Primary Antibody Response</h2><p>immune response의 정도는 antibody의 concentration을 이용해서 측정한다. </p>
+<h2 id="Antibody-Response-측정"><a href="#Antibody-Response-측정" class="headerlink" title="Antibody Response 측정"></a>Antibody Response 측정</h2><p>immune response의 정도는 antibody의 concentration을 이용해서 측정한다. </p>
 <p>antibody의 농도를 측정하는데 여러가지 측정 방법을 소개하고자 한다. </p>
 <p>BSA를 이용해서 immunization 시켰다고 가정하자. </p>
-<ol>
-<li>Precipitation assay<br>antigen을 주입한 후에 <strong>7-8</strong>일 (lag phase) 이후에 BSA를 serum과 섞으면 만약 antibody가 있으면 BSA와 crosslink를 형성할 것이다. 100ug/ml 이상 Ab가 있어야 검출되고 cross linking 을 형성할 수있을 정도로 high-affinity한 Abs이어야 하기 때문에 insensitive한 assay이다. 초기에는 low-affinity Abs들이 생성되기 때문에 Abs 생성 시작 시점도 정확하게 알 수 없다. </li>
-</ol>
+<p><strong>1. Precipitation assay<br>antigen을 주입한 후에 **7-8</strong>일 (lag phase) 이후에 BSA를 serum과 섞으면 만약 antibody가 있으면 BSA와 crosslink를 형성할 것이다. 100ug/ml 이상 Ab가 있어야 검출되고 cross linking 을 형성할 수있을 정도로 high-affinity한 Abs이어야 하기 때문에 insensitive한 assay이다. 초기에는 low-affinity Abs들이 생성되기 때문에 Abs 생성 시작 시점도 정확하게 알 수 없다. </p>
 <ul>
 <li>100ug/ml 이상, high affinity of Abs are needed</li>
 <li>7~8일 이후에 측정 가능</li>
 </ul>
-<ol>
-<li>Agglutination Assay<br>열로 SRBC 표면을 fix 시킨다. 이는 cell 표면에 Ag이 고정이 되게 만든다. 이를 test serum과 결합시키면 Abs가 serum에 있으면 crosslink 해서 agglutination이 일어나고 정도를 측정한다.  </li>
-</ol>
+<p><strong>2. Agglutination Assay</strong><br>열로 SRBC 표면을 fix 시킨다. 이는 cell 표면에 Ag이 고정이 되게 만든다. 이를 test serum과 결합시키면 Abs가 serum에 있으면 crosslink 해서 agglutination이 일어나고 정도를 측정한다.  </p>
 <ul>
 <li>1mg of Abs are needed</li>
 <li>5~7일 이후에 측정 가능</li>
 </ul>
-<ol>
-<li>Hemeagglutination (Hemolysis)<br>SRBC와 (BSA와 covelently 결합한) test serum을 결합시키고 complement를 넣는다. complement는 Abs와 결합한 SRBC에 반응하여 SRBCs를 lysis 시킨다. lysis로 인해 Hgb이 노출되고 이를 OD400에서 측정한다.</li>
-</ol>
+<p><strong>3. Hemeagglutination (Hemolysis)</strong><br>SRBC와 (BSA와 covelently 결합한) test serum을 결합시키고 complement를 넣는다. complement는 Abs와 결합한 SRBC에 반응하여 SRBCs를 lysis 시킨다. lysis로 인해 Hgb이 노출되고 이를 OD400에서 측정한다.</p>
 <ul>
 <li>10 ~ 100 nanograms of antibody are needed</li>
 <li>4~5일 이후에 측정 가능</li>
 </ul>
-<ol>
-<li>Phage neutralization assay<br>BSA를 T4 phage의 tail에 결합시킨 후에 E. coli에 infect 시킨다. 배양시킨 plate에 test serum을 넣으면 antibody가 plaque 생성을 방해해서 antibody 농도가 낮을 수록 plague 수가 많다. </li>
-</ol>
+<p><strong>4. Phage neutralization assay</strong><br>BSA를 T4 phage의 tail에 결합시킨 후에 E. coli에 infect 시킨다. 배양시킨 plate에 test serum을 넣으면 antibody가 plaque 생성을 방해해서 antibody 농도가 낮을 수록 plague 수가 많다. </p>
 <ul>
 <li>picogram of antibody are needed</li>
 <li>2~3일 이후에 측정 가능</li>
 </ul>
-<ol>
-<li>Radio Immuno Assay<br>BSA의 tyrosin residue의 I를 I125로 labeling한다.<br>Solution phase의 경우에는 labeling한 BSA를 test serum을 혼합한다. 이후 secondary Ab를 넣어서 precipitation 시켜서 radioisotope를 측정한다. Solid phase의 경우에는 BSA + serum solution을 plate에 coating 시키고 secondary Abs를 처리한다. 여기서 주의할 점은 BSA가 plate에 결합 할 때 한 방향으로 결합을 하기 때문에 특정 determinate의 경우 실제로는 BSA에 결합할 수 있음에도 불구하고 결합을 하지 못한다는 것이다. </li>
-</ol>
+<p><strong>5. Radio Immuno Assay</strong><br>BSA의 tyrosin residue의 I를 I125로 labeling한다.<br>Solution phase의 경우에는 labeling한 BSA를 test serum을 혼합한다. 이후 secondary Ab를 넣어서 precipitation 시켜서 radioisotope를 측정한다. Solid phase의 경우에는 BSA + serum solution을 plate에 coating 시키고 secondary Abs를 처리한다. 여기서 주의할 점은 BSA가 plate에 결합 할 때 한 방향으로 결합을 하기 때문에 특정 determinate의 경우 실제로는 BSA에 결합할 수 있음에도 불구하고 결합을 하지 못한다는 것이다. </p>
 <ul>
 <li>picogram of antibody are needed</li>
 <li>1~2일 이후에 측정 가능</li>
 </ul>
-<ol>
-<li><p>Enzyme linked Immuno Assay<br>radio immuno assay에서 radioisotope 대신 B-galactosidase와 같은 enzyme들을 이용한 방법이다. enzyme의 색변화를 이용해서 spectrophotometer로 흡광도를 측정한다. </p>
-</li>
-<li><p>Hemolytic Plaque Assay<br>B cell, T cell을 spleen으로 부터 분리한다. 이를 SRBC-BSA와 섞으면 Abs와 결합할 것이다. 여기에 complement를 넣어주게 되면 SRBC-BSA + Abs는 lysis되어 plaques를 관찰할 수 있다. </p>
-</li>
-</ol>
+<p><strong>6. Enzyme linked Immuno Assay</strong><br>radio immuno assay에서 radioisotope 대신 B-galactosidase와 같은 enzyme들을 이용한 방법이다. enzyme의 색변화를 이용해서 spectrophotometer로 흡광도를 측정한다. </p>
+<p><strong>7. Hemolytic Plaque Assay</strong><br>B cell, T cell을 spleen으로 부터 분리한다. 이를 SRBC-BSA와 섞으면 Abs와 결합할 것이다. 여기에 complement를 넣어주게 되면 SRBC-BSA + Abs는 lysis되어 plaques를 관찰할 수 있다. </p>
 <ul>
 <li>100 molecules of antibody are needed</li>
 <li>1시간 이내에 측정 가능</li>
@@ -292,7 +349,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 minutes read (About 543 words)
+                    4 minutes read (About 598 words)
                 </span>
                 
                 
@@ -305,30 +362,27 @@
             
         </h1>
         <div class="content">
-            <p>antibody response의 특징은 </p>
-<ol>
+            <h2 id="antibody-response의-특징"><a href="#antibody-response의-특징" class="headerlink" title="antibody response의 특징"></a>antibody response의 특징</h2><ol>
 <li><strong>Polyclonal</strong> : 다양한 종류의 Abs가 하나의 antigen에 반응한다. 이는 하나의 antigen에 대한 Abs들의 결합 부위가 다르기 때문에 나타난다. 이를 이용해서 antigen에 mutant가 발생해도 다른 종류의 Abs가 이를 대체 할 수 있다.</li>
 <li><strong>Monoclonal</strong> : 하나의 lymphocyte가 한가지 type의 Abs를 만들어낸다.  </li>
 </ol>
 <hr>
-<p>Antibody의 특징 중 하나가 바로 <strong>diversity</strong>로서 10^7~10^8개의 종류가 존재한다. </p>
-<p><strong>crossreactivity</strong> antibody가 antigen의 작은 구조적 차이에 tolerance를 가지는 것으로 이는 antigen의 개수보다 antibody의 개수가 적은 것을 설명할 수있다. </p>
+<p>Antibody의 특징 중 하나가 바로 <strong>diversity</strong>로서 $$10^7$$~$$10^8$$개의 종류가 존재한다. </p>
+<p><strong>crossreactivity</strong> : antibody가 antigen의 작은 구조적 차이에 tolerance를 가지는 것으로 이는 antigen의 개수보다 antibody의 개수가 적은 것을 설명할 수있다. </p>
 <blockquote>
-<p><strong>Note</strong> antibody의 개수와 antigen의 대략적 개수는?<br><strong>Note</strong> myeloma는 clonal expansion이 tumor 처럼 변해서 antibody의 농도가 필요 이상으로 높아지는 (100mg/ml) 것이다. </p>
+<p><strong>Question</strong> antibody의 개수와 antigen의 대략적 개수는?<br><strong>Note</strong> <strong>myeloma</strong> : clonal expansion이 tumor 처럼 변해서 antibody의 농도가 필요 이상으로 높아지는 (100mg/ml) 것이다. </p>
 </blockquote>
 <hr>
-<p><strong>Negative control of immune response</strong></p>
-<ol>
+<h2 id="Negative-control-of-immune-response"><a href="#Negative-control-of-immune-response" class="headerlink" title="Negative control of immune response"></a>Negative control of immune response</h2><ol>
 <li>immunologic tolerance : 발생단계에서 self에 대한 tolerance를 가진다. </li>
 <li>immune suppression : 장기 이식 등에서 immune response를 억제하는 것.</li>
 <li>immune paralysis : 과다한 양의 antigen이 들어오게 되면 immune burst를 일으켜서 순간적으로 B cell 이 고갈되는 것을 말한다. </li>
 </ol>
 <blockquote>
-<p><strong>Note</strong> ATGAM ??</p>
+<p><strong>Note</strong> ATGAM (equine antithymocyte globulin) : 장기이식 거부반응 발생의 위험이 높은 고위험 환자에 사용</p>
 </blockquote>
 <hr>
-<p><strong>Autoimmunity</strong> </p>
-<ol>
+<h2 id="Autoimmunity"><a href="#Autoimmunity" class="headerlink" title="Autoimmunity"></a>Autoimmunity</h2><ol>
 <li>Lupus : Nucleic acids에 대한 Abs 생성</li>
 <li>류마티스 관절염 : gamma globulin fraction에 대한 Abs 생성</li>
 <li>muscular sclerosis : muscle tissue에 대한 Abs 생성</li>
@@ -336,18 +390,14 @@
 </ol>
 <p>autoimmune과 관계가 깊은 것이 <strong>complement</strong>이다.<br>complement cascade는 antibody-APC complex를 인식하고 apoptosis 시킨다. </p>
 <hr>
-<p><strong>Polymeric vs. monomeric</strong><br>antibody 중에서 하나의 binding site를 가지는 univalent한 antibody는 존재하지 않는다. 최소 binding site 개수인 2개를 가진 antibody를 monomeric antibody라고 하고 그 이상을 가진 것을 polymeric이라고 한다. (e.g. IgM은 10개의 binding site를 가진다.)</p>
-<hr>
-<p>antisera = collection of Ab’s </p>
-<hr>
-<p><strong>antibody는 antigen을 어떻게 인식할까?</strong></p>
-<ol>
-<li>Sequential (primary determinants) : antigen의 primary amino acid sequence를 인식한다. 인식부위는 보통 amino acid 5개 정도로 구성되어 있다. (평균적인 amino acid 기준)</li>
-<li>Conformational (secondary determinants) : 구조를 인식한다. 이 경우에 antigen의 구조의 변형이 일어나면 인식하지 못한다. </li>
+<h2 id="Polymeric-vs-monomeric-antibody"><a href="#Polymeric-vs-monomeric-antibody" class="headerlink" title="Polymeric vs. monomeric antibody"></a>Polymeric vs. monomeric antibody</h2><p>antibody 중에서 하나의 binding site를 가지는 univalent한 antibody는 존재하지 않는다. 최소 binding site 개수인 2개를 가진 antibody를 monomeric antibody라고 하고 그 이상을 가진 것을 polymeric이라고 한다. (e.g. IgM은 10개의 binding site를 가지는 polymeric Ab)</p>
+<h2 id="antibody는-antigen을-어떻게-인식할까"><a href="#antibody는-antigen을-어떻게-인식할까" class="headerlink" title="antibody는 antigen을 어떻게 인식할까?"></a>antibody는 antigen을 어떻게 인식할까?</h2><ol>
+<li><strong>Sequential (primary determinants)</strong> : antigen의 primary amino acid sequence를 인식한다. 인식부위는 보통 amino acid 5개 정도로 구성되어 있다. (평균적인 amino acid 기준)</li>
+<li><strong>Conformational (secondary determinants)</strong> : 구조를 인식한다. 이 경우에 antigen의 구조의 변형이 일어나면 인식하지 못한다. 구조적으로 외부에 드러나 있을 가능성이 높아서 hydrophilic 할 가능성이 높다. </li>
 </ol>
 <blockquote>
 <blockquote>
-<p><strong>Note</strong> immunoblast를 할 때는 conformational + sequential 이 혼합된 것을 사용한다. </p>
+<p><strong>Note</strong> immunoblast를 할 때는 conformational + sequential 이 혼합된 것을 사용한다.<br><strong>Note</strong> Da = 1 g/mol</p>
 </blockquote>
 </blockquote>
 
@@ -388,7 +438,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 260 words)
+                    3 minutes read (About 393 words)
                 </span>
                 
                 
@@ -402,11 +452,21 @@
         </h1>
         <div class="content">
             <p><strong>Plasma</strong> : whole blood - cell<br><strong>Serum</strong> : whole blood - cell - clotting factors (thrombin, fibrinogen … ) </p>
-<p>Serum에는 200 종류 이상의 protein이 포함되어있고 (100mg/ml of protein) electrophoresis로 분리 가능하다. 그 중 가장 빠르게 분리 되는 단백질은 pI 4.0 - 4.2의 <strong>serum albumin</strong>은 acidic polyanion으로 혈액 내 파편들을 clotting 하는 역할을 한다. (50mg/ml) 또한 가장 느리게 분리되는 단백질은 <strong>gamma globulin</strong>이다. 모든 antibody가 이 farction에서 검출된다. (10-12mg/ml)</p>
-<p><img src="https://user-images.githubusercontent.com/55701228/80873146-7b306e80-8cf1-11ea-81d8-41e56b6857d5.jpg" alt="20200503 1"></p>
-<p>전체 100mg/ml 중 serum albumin이 50mg/ml로 50%를 차지하고 gamma globulin이 전체 단백질의 10%인 10mg/ml을 차지하는 것이다. </p>
-<p><strong>titer</strong>란 antibody를 detection 하기 위한 minimum dilution factor로서 antibody가 antigen에 얼마나 잘 반응하는 가를 보여주는 척도이다.<br>예를 들어 antibody A는 1/1000 dilution (=1000 titer)을 하고 B는 1/10000 dilution (=10000 titer)을 했을 때 최소값으로 antigen을 detection 할 수 있다고 이야기 할 수 있는 것이다.</p>
-<p><strong>antigen 명명법</strong><br><img src="https://user-images.githubusercontent.com/55701228/80872533-723d9e00-8ced-11ea-9e1e-382305cbddcd.png" alt="20200503 2"> </p>
+<p>Serum에는 200 종류 이상의 protein이 포함되어있고 (100mg/ml of protein) electrophoresis로 분리 가능하다. 그 중 가장 빠르게 분리 되는 단백질은 pI 4.0 - 4.2의 <strong>serum albumin</strong>은 acidic polyanion으로 혈액 내 garbage collector의 역할을 한다. (50mg/ml) 또한 가장 느리게 분리되는 단백질은 <strong>gamma globulin</strong>이다. 모든 antibody가 이 farction에서 검출된다. (10-12mg/ml)</p>
+<blockquote>
+<p>그림 첨부 예정 : 혈액 내 단백질 구성, pI별, 구성 비율별</p>
+</blockquote>
+<p>전체 100mg/ml 중 serum albumin이 50mg/ml로 50%를 차지하고 gamma globulin 전체 단백질의 10%인 10mg/ml을 차지하는 것이다. </p>
+<p>하지만 여기서 Ab activity를 가지지 않는 <strong>Normal globulin</strong>이 대부분을 차지하고 있고 원하는 <strong>specific antibody</strong>는 1mg/ml, 즉, 1%를 차지한다. (이 1mlg/ml도 한 종류의 Abs로 이루어져 있지는 않다. 참고 : polycronal)</p>
+<p><strong>titer</strong>란 antibody를 detection 하기 위한 minimum dilution factor로서 antibody가 antigen에 얼마나 잘 반응하는 가를 보여주는 척도이다. </p>
+<p>예를 들어 antibody A는 1/1000 dilution (=1000 titer)을 하고 B는 1/10000 dilution (=10000 titer)을 했을 때 최소값으로 antigen을 detection 할 수 있다고 이야기 할 수 있는 것이다.</p>
+<p>즉, 다른 조건이 동일 할 때 concentration이 높을 수록, 또는 affinity가 높을 수록 titer의 값은 커진다. 하지만 여기서 concentration의 경우 정비례 하지만, affinity가 커질 경우 log로 증가하는 경향을 보인다. </p>
+<p><strong>antigen 명명법</strong> </p>
+<blockquote>
+<blockquote>
+<p>Mouse anti-BSA<br>mouse : antibody를 생성한 host animal<br>BSA (Bovine Serum Albumin) : immunogen </p>
+</blockquote>
+</blockquote>
 
         </div>
         
@@ -445,7 +505,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a minute read (About 157 words)
+                    a minute read (About 206 words)
                 </span>
                 
                 
@@ -459,20 +519,28 @@
         </h1>
         <div class="content">
             <p><strong>Immunogen</strong> : immune response를 일으키는 물질 (넓은 개념)<br><strong>Antigen(Ag)</strong> : antibody와 결합하는 물질 </p>
-<p>Immunogen은 primary immune system(lymphocyte or plasma cell)을 유도한다. Immunogen이 가지는 두가지 특징은</p>
+<blockquote>
+<p><strong>Note</strong> Immunogen 이면서 Antigen이 아닌 것은? </p>
+</blockquote>
+<p><strong>Immunogen</strong>은 primary immune system (lymphocyte or plasma cell)을 유도한다. </p>
+<p><strong>Immunogen</strong>이 가지는 두가지 특징은</p>
 <ol>
 <li>10kDa 이상의 <strong>macromolecule</strong></li>
-<li><strong>Repetitiveness</strong> (반복성)</li>
-</ol>
-<blockquote>
-<p><strong>Note</strong> chemical A의 molecular weight(MW)가 100정도의 작은 분자라고 하자. 이런 경우 1개의 분자만으로 immune response를 일으킬 수는 없지만 carrier를 이용하면 (주로 protein with lysine residue) 가능하다. 이때 A는 ligand가 되고 complex는 antigen이 된다. </p>
+<li><strong>Repetitiveness</strong> (반복성)<blockquote>
+<p><strong>Note</strong> 평균적으로 amino acid 한 개의 분자량은 110kDa이다. </p>
 </blockquote>
+</li>
+</ol>
+<p>chemical A의 molecular weight(MW)가 100정도의 작은 분자라고 하자. <strong>(Hapten)</strong> 이런 경우 1개의 분자만으로 immune response를 일으킬 수는 없지만 carrier를 이용하면 (주로 protein with lysine residue) 가능하다. 이때 A는 <strong>ligand</strong>가 되고 complex는 <strong>antigen</strong>이 된다. </p>
+<p><strong>Hapten</strong> large carrier에 결합해서 immune response를 일으키는 작은 molecules</p>
 <blockquote>
-<p><strong>Note</strong> Why carrier protein should contain lysine residue?  </p>
+<p><strong>Question</strong> Why carrier protein should contain lysine residue?  </p>
 </blockquote>
 <p><strong>Epitope</strong> (= antigenic deteminant)는 antibody의 active site에 의해 인식되는 부분.</p>
 <blockquote>
-<p><strong>Note</strong> immunoge = epitope ? </p>
+<blockquote>
+<p><strong>Note</strong> 그림 첨부</p>
+</blockquote>
 </blockquote>
 
         </div>
@@ -781,62 +849,6 @@
 
 
 
-    
-<div class="card">
-    
-    <div class="card-image">
-        <a href="/2020/03/03/post-20200303/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/thumbnails/Programming.jpg" alt="Contents of ML&amp;DL">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-03-03T14:39:10.000Z">2020-03-03</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Machine-Learning-Deep-Learning/">Machine Learning & Deep Learning</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 23 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/03/03/post-20200303/">Contents of ML&amp;DL</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Python-Pachkages"><a href="#Python-Pachkages" class="headerlink" title="Python Pachkages"></a>Python Pachkages</h2><ol>
-<li>Numpy : Matrix / Linear Algebra / Statistics</li>
-<li>Scikit-Learn : Maching Learning packages</li>
-</ol>
-<h2 id="Supervised-Learning"><a href="#Supervised-Learning" class="headerlink" title="Supervised Learning"></a>Supervised Learning</h2><h2 id="Un-supervised-Learning"><a href="#Un-supervised-Learning" class="headerlink" title="Un-supervised Learning"></a>Un-supervised Learning</h2><p>Image by <a href="https://pixabay.com/users/GDJ-1086657/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2729781">Gordon Johnson</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2729781">Pixabay</a></p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -901,7 +913,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            13
+                            14
                         </p>
                     </a>
                 </div>
@@ -913,7 +925,7 @@
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
-                            6
+                            7
                         </p>
                     </a>
                 </div>
@@ -925,7 +937,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            10
+                            12
                         </p>
                     </a>
                 </div>
@@ -1044,6 +1056,14 @@
                 <span class="level-item tag">4</span>
             </span>
         </a></li><li>
+        <a class="level is-marginless" href="/categories/ML-DL/">
+            <span class="level-start">
+                <span class="level-item">ML & DL</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/Machine-Learning-Deep-Learning/">
             <span class="level-start">
                 <span class="level-item">Machine Learning & Deep Learning</span>
@@ -1086,7 +1106,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/Biology/" style="font-size: 20px;">Biology</a> <a href="/tags/Games/" style="font-size: 10px;">Games</a> <a href="/tags/ML/" style="font-size: 13.33px;">ML</a> <a href="/tags/Probability/" style="font-size: 10px;">Probability</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Statistics/" style="font-size: 10px;">Statistics</a> <a href="/tags/Unity/" style="font-size: 10px;">Unity</a> <a href="/tags/github/" style="font-size: 16.67px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/icarus/" style="font-size: 10px;">icarus</a>
+        <a href="/tags/Biology/" style="font-size: 20px;">Biology</a> <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/Games/" style="font-size: 10px;">Games</a> <a href="/tags/ML/" style="font-size: 13.33px;">ML</a> <a href="/tags/Probability/" style="font-size: 10px;">Probability</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Pytorch/" style="font-size: 10px;">Pytorch</a> <a href="/tags/Statistics/" style="font-size: 10px;">Statistics</a> <a href="/tags/Unity/" style="font-size: 10px;">Unity</a> <a href="/tags/github/" style="font-size: 16.67px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/icarus/" style="font-size: 10px;">icarus</a>
     </div>
 </div>
     
@@ -1098,6 +1118,25 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/06/05/project-20200605/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/thumbnails/background.jpeg" alt="딥러닝을 이용한 이미지 컬러링 선행 연구 조사">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-05T00:09:11.000Z">2020-06-05</time></div>
+                    <a href="/2020/06/05/project-20200605/" class="title has-link-black-ter is-size-6 has-text-weight-normal">딥러닝을 이용한 이미지 컬러링 선행 연구 조사</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/ML-DL/">ML & DL</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1175,25 +1214,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/03/20/post-20200321/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/thumbnails/background.jpeg" alt="Cleavage">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-20T06:20:57.000Z">2020-03-20</time></div>
-                    <a href="/2020/03/20/post-20200321/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Cleavage</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Developmental-Biology/">Developmental Biology</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -1204,6 +1224,17 @@
             Archives
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2020/05/">
@@ -1259,6 +1290,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Deep-Learning/">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Games/">
                         <span class="tag">Games</span>
                         <span class="tag is-grey">1</span>
@@ -1282,6 +1320,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Python/">
                         <span class="tag">Python</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Pytorch/">
+                        <span class="tag">Pytorch</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1345,6 +1390,25 @@
         
         <article class="media">
             
+            <a href="/2020/06/05/project-20200605/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/thumbnails/background.jpeg" alt="딥러닝을 이용한 이미지 컬러링 선행 연구 조사">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-06-05T00:09:11.000Z">2020-06-05</time></div>
+                    <a href="/2020/06/05/project-20200605/" class="title has-link-black-ter is-size-6 has-text-weight-normal">딥러닝을 이용한 이미지 컬러링 선행 연구 조사</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/ML-DL/">ML & DL</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/05/06/post-20200506/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/gallery/thumbnails/background.jpeg" alt="면역학 STUDY (4) - Immune Response">
@@ -1419,25 +1483,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/03/20/post-20200321/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/gallery/thumbnails/background.jpeg" alt="Cleavage">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-20T06:20:57.000Z">2020-03-20</time></div>
-                    <a href="/2020/03/20/post-20200321/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Cleavage</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Developmental-Biology/">Developmental Biology</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -1448,6 +1493,17 @@
             Archives
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2020/05/">
@@ -1503,6 +1559,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/Deep-Learning/">
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/Games/">
                         <span class="tag">Games</span>
                         <span class="tag is-grey">1</span>
@@ -1526,6 +1589,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Python/">
                         <span class="tag">Python</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Pytorch/">
+                        <span class="tag">Pytorch</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>

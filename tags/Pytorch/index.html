@@ -17,13 +17,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<link rel="canonical" href="http://yoursite.com/categories/machine-learning-deep-learning/"/>
-<title>Category: Machine Learning &amp; Deep Learning - YJblog</title>
+<link rel="canonical" href="http://yoursite.com/tags/pytorch/"/>
+<title>Tag: Pytorch - YJblog</title>
 
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="YJblog">
-<meta property="og:url" content="http://yoursite.com/categories/Machine-Learning-Deep-Learning/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/Pytorch/index.html">
 <meta property="og:site_name" content="YJblog">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
@@ -162,9 +162,8 @@
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
-            <li><a href="/categories">Categories</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">Machine Learning &amp; Deep Learning</a></li>
+            <li><a href="/tags">Tags</a></li>
+            <li class="is-active"><a href="#" aria-current="page">Pytorch</a></li>
         </ul>
         </nav>
     </div>
@@ -174,8 +173,8 @@
 <div class="card">
     
     <div class="card-image">
-        <a href="/2020/03/04/post-20200304/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/thumbnails/Machine_learning.png" alt="Python Pachkages-Numpy">
+        <a href="/2020/06/05/project-20200605/" class="image is-7by1">
+            <img class="thumbnail" src="/gallery/thumbnails/background.jpeg" alt="딥러닝을 이용한 이미지 컬러링 선행 연구 조사">
         </a>
     </div>
     
@@ -183,17 +182,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-03-04T05:39:10.000Z">2020-03-04</time>
+                <time class="level-item has-text-grey" datetime="2020-06-05T00:09:11.000Z">2020-06-05</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Machine-Learning-Deep-Learning/">Machine Learning & Deep Learning</a>
+                <a class="has-link-grey -link" href="/categories/ML-DL/">ML & DL</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 73 words)
+                    2 minutes read (About 290 words)
                 </span>
                 
                 
@@ -202,76 +201,30 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/03/04/post-20200304/">Python Pachkages-Numpy</a>
+                <a class="has-link-black-ter" href="/2020/06/05/project-20200605/">딥러닝을 이용한 이미지 컬러링 선행 연구 조사</a>
             
         </h1>
         <div class="content">
-            <p>Numpy package is python package based on linear algegra and statistics. Advantage of Numpy package is fast calculating speed <strong>without loop</strong>. However, it is not enough for data processing. </p>
-<blockquote>
-<p><strong>Note</strong> Use Pandas package to build dataframe and preprocessing.<br><strong>Note</strong> jupiter notebook</p>
-</blockquote>
-<h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><ul>
-<li>array()<br>convert list to ndarray</li>
+            <h2 id="DeOldify"><a href="#DeOldify" class="headerlink" title="DeOldify"></a>DeOldify</h2><p>흑백 사진을 컬러로 바꾸는 GAN + VGG16 모델</p>
+<p><a href="https://colab.research.google.com/github/jantic/DeOldify/blob/master/ImageColorizerColab.ipynb#scrollTo=663IVxfrpIAb">colab 링크</a></p>
+<p><a href="https://github.com/jantic/DeOldify">github 링크</a></p>
+<ul>
+<li>Colab 파일로 만들 때 이미지 주소를 이용해서 test 해볼 수 있어서 매우 간편</li>
+<li>Pretrained model에 대한 파일이 존재하기 때문에 실행 시간이 짧음.</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">array_1 &#x3D; np.array([[1,2,3],[4,5,6]])</span><br><span class="line">print(type(array_1))</span><br><span class="line">print(array_1.shape)</span><br><span class="line"></span><br><span class="line">array_2 &#x3D; np.array([[1,2,3]])</span><br><span class="line">print(type(array_2))</span><br><span class="line">print(array_2.shape)</span><br></pre></td></tr></table></figure>
-<p><strong>output</strong></p>
-<pre><code></code></pre><p><a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@maxcodes?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Max Nelson"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Max Nelson</span></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">source_url &#x3D; &#39;https:&#x2F;&#x2F;upload.wikimedia.org&#x2F;wikipedia&#x2F;commons&#x2F;7&#x2F;78&#x2F;Coronaviruses_004_lores.jpg&#39; #@param &#123;type:&quot;string&quot;&#125;</span><br><span class="line">render_factor &#x3D; 35  #@param &#123;type: &quot;slider&quot;, min: 7, max: 40&#125;</span><br><span class="line">watermarked &#x3D; True #@param &#123;type:&quot;boolean&quot;&#125;</span><br><span class="line"></span><br><span class="line">if source_url is not None and source_url !&#x3D;&#39;&#39;:</span><br><span class="line">    image_path &#x3D; colorizer.plot_transformed_image_from_url(url&#x3D;source_url, render_factor&#x3D;render_factor, compare&#x3D;True, watermarked&#x3D;watermarked)</span><br><span class="line">    show_image_in_notebook(image_path)</span><br><span class="line">else:</span><br><span class="line">    print(&#39;Provide an image url and try again.&#39;)</span><br></pre></td></tr></table></figure>
 
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-image">
-        <a href="/2020/03/03/post-20200303/" class="image is-7by1">
-            <img class="thumbnail" src="/gallery/thumbnails/Programming.jpg" alt="Contents of ML&amp;DL">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-03-03T14:39:10.000Z">2020-03-03</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Machine-Learning-Deep-Learning/">Machine Learning & Deep Learning</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 23 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/03/03/post-20200303/">Contents of ML&amp;DL</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Python-Pachkages"><a href="#Python-Pachkages" class="headerlink" title="Python Pachkages"></a>Python Pachkages</h2><ol>
-<li>Numpy : Matrix / Linear Algebra / Statistics</li>
-<li>Scikit-Learn : Maching Learning packages</li>
-</ol>
-<h2 id="Supervised-Learning"><a href="#Supervised-Learning" class="headerlink" title="Supervised Learning"></a>Supervised Learning</h2><h2 id="Un-supervised-Learning"><a href="#Un-supervised-Learning" class="headerlink" title="Un-supervised Learning"></a>Un-supervised Learning</h2><p>Image by <a href="https://pixabay.com/users/GDJ-1086657/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2729781">Gordon Johnson</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2729781">Pixabay</a></p>
+<h2 id="Automatic-Image-Colorization"><a href="#Automatic-Image-Colorization" class="headerlink" title="Automatic-Image-Colorization"></a>Automatic-Image-Colorization</h2><p>ResNet-18을 이용해서 train 시키고 CNN을 이용해서 upsampling 해서 image colorization한 모델</p>
+<ul>
+<li>MIT image data 사용</li>
+<li>training에서 test까지 모두 포함되어 있고 40,000개 iamge training</li>
+<li>training 속도가 비교적 빠름</li>
+</ul>
+<p><a href="https://colab.research.google.com/drive/1r45y6bnxT1d8qUe5YDovWYUbfX1hMnAz#scrollTo=UcovGnpHMl9D&forceEdit=true&sandboxMode=true">colab 링크</a></p>
+<p><a href="https://github.com/lukemelas/Automatic-Image-Colorization/">github 링크</a></p>
+<h2 id="Colorization-Network"><a href="#Colorization-Network" class="headerlink" title="Colorization Network"></a>Colorization Network</h2><p>CNN만을 이용한 colorizing 모델</p>
+<p><a href="https://colab.research.google.com/github/smartgeometry-ucl/dl4g/blob/master/colorization.ipynb">colab 링크</a></p>
+<p><a href="https://github.com/smartgeometry-ucl/dl4g">github 링크</a></p>
 
         </div>
         
